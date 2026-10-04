@@ -1,0 +1,44 @@
+======================================================================
+VIBE-CODE SECURITY RISK DETECTION & CLASSIFICATION
+AUTHENTIC EXPERIMENTAL FINDINGS & MODEL EVALUATION REPORT
+======================================================================
+
+1. DATASET SPECIFICATIONS
+Dataset Name:          Microsoft CodeXGLUE Defect Detection (Devign benchmark)
+Original Source:       Hugging Face (google/code_x_glue_cc_defect_detection)
+Paper Citation:        Zhou et al. (NeurIPS 2019)
+Total Evaluated Split: 6,000 samples (4,200 Train / 900 Val / 900 Test)
+Original Total Size:   27,318 functions
+Number of Features:    85 (35 Code & Security Metrics + 50 TF-IDF)
+Number of Classes:     2 (0 = Secure Code, 1 = Vulnerable Code)
+Test Set Ground Truth: 487 Secure (0) / 413 Vulnerable (1)
+
+2. COMPREHENSIVE EXPERIMENTAL RESULTS (TEST SET):
+----------------------------------------------------------------------
+Model                     Accuracy   Precision  Recall     F1-Score   ROC-AUC   
+----------------------------------------------------------------------
+Logistic Regression       0.5500     0.5147     0.3390     0.4088     0.5517    
+Random Forest             0.5800     0.5738     0.3293     0.4185     0.6048    
+Support Vector Machine    0.5856     0.5855     0.3317     0.4235     0.5790    
+Gradient Boosting         0.5656     0.5420     0.3438     0.4207     0.5792    
+ANN                       0.5644     0.5335     0.4044     0.4601     0.5864    
+----------------------------------------------------------------------
+
+3. COMPARATIVE ANALYSIS & SCIENTIFIC FINDINGS:
+* Highest F1-Score:    ANN (0.4601)
+* Highest Recall:      ANN (0.4044 vs ~0.33 in traditional baselines)
+* Highest ROC-AUC:     Random Forest (0.6048)
+* Highest Accuracy:    Support Vector Machine (0.5856)
+
+CRITICAL CYBERSECURITY INSIGHT:
+In automated software security risk screening, Recall and F1-Score are far more
+critical than raw Accuracy. A false negative (missing a vulnerable code snippet) creates
+a severe security exposure in production vibe-coded applications.
+The Artificial Neural Network (ANN) demonstrated superior capability in capturing
+vulnerability patterns, elevating Recall to 40.44% (compared to 32.93% for Random Forest)
+and yielding the highest overall F1-Score (0.4601).
+
+IMPORTANT ACADEMIC DISCLAIMER:
+Machine learning models provide probabilistic risk screening assistance and do not replace
+comprehensive dynamic fuzzing, symbolic execution, or manual security audits.
+======================================================================

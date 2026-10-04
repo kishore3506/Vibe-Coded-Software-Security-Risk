@@ -1,0 +1,28 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Testing & Caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# OS Specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Large Raw Datasets (keep processed subsets)
+data/raw/*.parquet

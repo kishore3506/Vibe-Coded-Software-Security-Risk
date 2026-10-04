@@ -1,0 +1,54 @@
+{
+    "dataset_name": "Microsoft CodeXGLUE Defect Detection (Devign benchmark)",
+    "source_url": "https://huggingface.co/datasets/google/code_x_glue_cc_defect_detection",
+    "original_paper": "Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks (Zhou et al., NeurIPS 2019)",
+    "programming_languages": [
+        "C",
+        "C++"
+    ],
+    "task_type": "Binary Vulnerability Classification (0=Secure, 1=Vulnerable)",
+    "original_statistics": {
+        "train": {
+            "total_samples": 21854,
+            "secure_count (0)": 11836,
+            "vulnerable_count (1)": 10018,
+            "vulnerability_rate": 0.45840578383819897
+        },
+        "validation": {
+            "total_samples": 2732,
+            "secure_count (0)": 1545,
+            "vulnerable_count (1)": 1187,
+            "vulnerability_rate": 0.43448023426061494
+        },
+        "test": {
+            "total_samples": 2732,
+            "secure_count (0)": 1477,
+            "vulnerable_count (1)": 1255,
+            "vulnerability_rate": 0.45937042459736455
+        }
+    },
+    "total_original_samples": 27318,
+    "subset_statistics": {
+        "train": {
+            "subset_samples": 4200,
+            "secure_count (0)": 2275,
+            "vulnerable_count (1)": 1925,
+            "vulnerability_rate": 0.4583333333333333
+        },
+        "validation": {
+            "subset_samples": 900,
+            "secure_count (0)": 509,
+            "vulnerable_count (1)": 391,
+            "vulnerability_rate": 0.43444444444444447
+        },
+        "test": {
+            "subset_samples": 900,
+            "secure_count (0)": 487,
+            "vulnerable_count (1)": 413,
+            "vulnerability_rate": 0.4588888888888889
+        }
+    },
+    "total_subset_samples": 6000,
+    "random_seed": 42,
+    "sampling_method": "Stratified random sampling preserving exact class distribution"
+}
